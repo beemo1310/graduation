@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#fff6f4">
+<meta name="theme-color" content="#fff6f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1230" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <meta property="og:title" content="Thư mời Lễ Tốt Nghiệp · Trần Khánh Linh">
 <meta property="og:description" content="Thứ Sáu 30.10.2026 · 11:00 – 12:00 · Hội trường Tạ Quang Bửu, Đại học Thăng Long">
 <title>Thư mời Lễ Tốt Nghiệp · Trần Khánh Linh</title>
@@ -135,6 +138,50 @@ footer{padding:20px 22px calc(70px + env(safe-area-inset-bottom,0px));text-align
 #lbc{margin:0;color:#fff;font-size:28px;line-height:1.2;text-align:center}
 #lb button{position:absolute;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer;line-height:1}
 #lb .lbx{top:calc(env(safe-area-inset-top,0px) + 12px);right:14px}#lb .lbp{left:10px;top:50%}#lb .lbn{right:10px;top:50%}
+
+/* ===== tối ưu điện thoại ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+body{-webkit-tap-highlight-color:transparent;padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+body.lock{height:100vh;height:100dvh}
+.hero{min-height:100vh;min-height:100svh}
+.paper{--lh:34px;padding:var(--lh) 30px;line-height:var(--lh);background-image:repeating-linear-gradient(transparent 0 calc(var(--lh) - 1px),var(--line) calc(var(--lh) - 1px) var(--lh));background-position:0 0}
+.paper p{margin:0 0 var(--lh)}
+.btn:active{transform:scale(.97)}
+#lb{overscroll-behavior:contain}
+@media (hover:none){
+  .pol:hover{transform:rotate(var(--r)) !important}
+  .flip:not(.on):hover>div{transform:none}
+}
+@media (max-width:640px){
+  section{padding:56px 16px}
+  body::after{animation:none}
+  .card{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper);padding:20px 16px}
+  .grid{gap:12px;margin-top:22px}
+  .hero{padding-top:36px;padding-bottom:24px}
+  .logo{padding:6px 12px;margin-bottom:12px}.logo img{height:30px}
+  .arch{width:min(230px,60vw);margin-bottom:8px}
+  .when{display:grid;gap:0;border-radius:18px;padding:10px 18px;font-size:13px}
+  .cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+  .cd div{width:auto;padding:12px 0}.cd b{font-size:26px}.cd span{font-size:10px;letter-spacing:.08em}
+  .acts{flex-direction:column;align-items:stretch;max-width:340px;margin-inline:auto}
+  .acts .btn{width:100%;min-height:50px;display:flex;align-items:center;justify-content:center;text-align:center}
+  .paper{--lh:32px;padding:var(--lh) 18px;font-size:15px}
+  .paper .sig{font-size:30px}
+  .vg{grid-template-columns:repeat(3,1fr);gap:10px}
+  .flip{height:124px}.flip .f{font-size:38px}.flip .b{font-size:12px}.flip .b em{font-size:17px}
+  .chap{margin-top:34px}
+  .gal2{columns:2;column-gap:12px}
+  .gal2 .pol{padding:7px 7px 9px;margin-bottom:14px}
+  .pol p{font-size:19px;margin-top:6px}
+  .pol img{filter:none;transition:none}
+  #lbm img,#lbm video{max-width:94vw;max-height:70vh;max-height:70dvh}
+  #lb .lbp,#lb .lbn{top:auto;bottom:calc(env(safe-area-inset-bottom,0px) + 14px)}
+  #lb .lbp{left:18px}#lb .lbn{right:18px}
+  #lb .lbx{width:48px;height:48px}
+}
+@media (max-width:640px) and (max-height:700px){
+  .arch{width:min(170px,44vw)}.hp{font-size:30px}h1{font-size:30px}.name{font-size:26px}
+}
 </style>
 </head>
 <body class="lock">
@@ -150,7 +197,7 @@ footer{padding:20px 22px calc(70px + env(safe-area-inset-bottom,0px));text-align
 <section class="hero">
   <div class="logo fade" style="--d:0"><img src="assets/logo.png" alt="Thang Long University"></div>
   <div class="eyebrow fade" style="--d:.1">Thân mời tham dự</div>
-  <div class="arch fade" style="--d:.2"><img id="hp" src="assets/hero.jpg" alt="Trần Khánh Linh"></div>
+  <div class="arch fade" style="--d:.2"><img id="hp" fetchpriority="high" decoding="async" src="assets/hero.jpg" alt="Trần Khánh Linh"></div>
   <div class="hp script fade" style="--d:.4">Happy Graduation!</div>
   <div id="kanji" class="jp" aria-label="Chúc mừng tốt nghiệp"></div>
   <h1 class="serif fade" style="--d:.9">Lễ Tốt Nghiệp</h1>
@@ -166,7 +213,6 @@ footer{padding:20px 22px calc(70px + env(safe-area-inset-bottom,0px));text-align
   <div class="eyebrow rv">Thân gửi</div>
   <h2 class="rv" style="--d:1">Một lá thư nhỏ</h2>
   <div class="paper rv" style="--d:2">
-    <p>Mới ngày nào còn bỡ ngỡ bước vào giảng đường, vậy mà giờ mình đã đứng trước ngày tốt nghiệp. Những trang từ vựng, những buổi học tiếng Nhật và bao kỷ niệm cùng thầy cô, bạn bè sắp khép lại thành một chặng đường đáng nhớ.</p>
     <p>Cảm ơn bạn đã luôn ở bên, sẻ chia và tiếp thêm động lực cho mình suốt thời gian qua.</p>
     <p>Rất mong được đón bạn đến chung vui trong ngày đặc biệt này!</p>
     <p class="sig script">Khánh Linh</p>
@@ -213,23 +259,23 @@ footer{padding:20px 22px calc(70px + env(safe-area-inset-bottom,0px));text-align
   <p class="rv" style="--d:2;color:var(--muted);margin:0">Chạm vào ảnh để xem lớn, chạm vào video để phát</p>
   <h3 class="chap script rv">Những ngày cắm đầu vào học</h3>
   <div class="gal2">
-<figure class="pol vid" data-video="assets/video/phong-may.mp4" data-cap="Phòng máy"><img src="assets/video/phong-may-poster.jpg" width="640" height="360" alt="Video ở phòng máy" loading="lazy"><span class="play" aria-hidden="true">▶</span><p class="script">Phòng máy</p></figure>
-<figure class="pol" data-cap="Giờ phòng máy"><img src="assets/img/01-gio-phong-may.jpg" width="1000" height="1000" alt="Học ở phòng máy" loading="lazy"><p class="script">Giờ phòng máy</p></figure>
-<figure class="pol" data-cap="Quyết tâm học!!!"><img src="assets/img/02-quyet-tam-hoc.jpg" width="748" height="752" alt="Quyết tâm học" loading="lazy"><p class="script">Quyết tâm học!!!</p></figure>
-<figure class="pol" data-cap="Ngoẻo"><img src="assets/img/03-ngoeo.jpg" width="748" height="752" alt="Ôn từ vựng" loading="lazy"><p class="script">Ngoẻo</p></figure>
-<figure class="pol" data-cap="Chợp mắt tí thôi"><img src="assets/img/04-chop-mat.jpg" width="748" height="665" alt="Chợp mắt giữa giờ học" loading="lazy"><p class="script">Chợp mắt tí thôi</p></figure>
-<figure class="pol" data-cap="Có mèo canh bài"><img src="assets/img/05-meo-canh-bai.jpg" width="562" height="1000" alt="Chợp mắt bên bạn mèo" loading="lazy"><p class="script">Có mèo canh bài</p></figure>
-<figure class="pol" data-cap="03.10.2024"><img src="assets/img/06-03-10-2024.jpg" width="750" height="1000" alt="Học bài ngày 03.10.2024" loading="lazy"><p class="script">03.10.2024</p></figure>
-<figure class="pol" data-cap="21.12.2024"><img src="assets/img/07-21-12-2024.jpg" width="750" height="1000" alt="Học bài ở quán cà phê" loading="lazy"><p class="script">21.12.2024</p></figure>
+<figure class="pol vid" data-video="assets/video/phong-may.mp4" data-cap="Phòng máy"><img src="assets/video/phong-may-poster.jpg" width="640" height="360" alt="Video ở phòng máy" loading="lazy" decoding="async"><span class="play" aria-hidden="true">▶</span><p class="script">Phòng máy</p></figure>
+<figure class="pol" data-cap="Giờ phòng máy"><img src="assets/img/01-gio-phong-may.jpg" width="1000" height="1000" alt="Học ở phòng máy" loading="lazy" decoding="async"><p class="script">Giờ phòng máy</p></figure>
+<figure class="pol" data-cap="Quyết tâm học!!!"><img src="assets/img/02-quyet-tam-hoc.jpg" width="748" height="752" alt="Quyết tâm học" loading="lazy" decoding="async"><p class="script">Quyết tâm học!!!</p></figure>
+<figure class="pol" data-cap="Ngoẻo"><img src="assets/img/03-ngoeo.jpg" width="748" height="752" alt="Ôn từ vựng" loading="lazy" decoding="async"><p class="script">Ngoẻo</p></figure>
+<figure class="pol" data-cap="Chợp mắt tí thôi"><img src="assets/img/04-chop-mat.jpg" width="748" height="665" alt="Chợp mắt giữa giờ học" loading="lazy" decoding="async"><p class="script">Chợp mắt tí thôi</p></figure>
+<figure class="pol" data-cap="Có mèo canh bài"><img src="assets/img/05-meo-canh-bai.jpg" width="562" height="1000" alt="Chợp mắt bên bạn mèo" loading="lazy" decoding="async"><p class="script">Có mèo canh bài</p></figure>
+<figure class="pol" data-cap="03.10.2024"><img src="assets/img/06-03-10-2024.jpg" width="750" height="1000" alt="Học bài ngày 03.10.2024" loading="lazy" decoding="async"><p class="script">03.10.2024</p></figure>
+<figure class="pol" data-cap="21.12.2024"><img src="assets/img/07-21-12-2024.jpg" width="750" height="1000" alt="Học bài ở quán cà phê" loading="lazy" decoding="async"><p class="script">21.12.2024</p></figure>
   </div>
   <h3 class="chap script rv">Bên những người bạn</h3>
   <div class="gal2">
-<figure class="pol vid" data-video="assets/video/ky-niem-lop-04-10-2024.mp4" data-cap="Kỷ niệm lớp · 04.10.2024"><img src="assets/video/ky-niem-lop-04-10-2024-poster.jpg" width="640" height="480" alt="Video kỷ niệm lớp" loading="lazy"><span class="play" aria-hidden="true">▶</span><p class="script">Kỷ niệm lớp · 04.10.2024</p></figure>
-<figure class="pol" data-cap="04.10.2024"><img src="assets/img/08-04-10-2024.jpg" width="750" height="1000" alt="Nháy mắt cùng bạn cùng lớp" loading="lazy"><p class="script">04.10.2024</p></figure>
-<figure class="pol" data-cap="Nay sinh nhật nhé!"><img src="assets/img/09-sinh-nhat-ban-be.jpg" width="748" height="752" alt="Sinh nhật cùng bạn bè" loading="lazy"><p class="script">Nay sinh nhật nhé!</p></figure>
-<figure class="pol" data-cap="Thổi nến"><img src="assets/img/10-thoi-nen.jpg" width="750" height="1000" alt="Thổi nến sinh nhật" loading="lazy"><p class="script">Thổi nến</p></figure>
-<figure class="pol" data-cap="Thăng Long 35 mùa hoa"><img src="assets/img/11-thang-long-35-mua-hoa.jpg" width="648" height="730" alt="Check-in Thăng Long 35 mùa hoa" loading="lazy"><p class="script">Thăng Long 35 mùa hoa</p></figure>
-<figure class="pol" data-cap="Một tối cùng nhau"><img src="assets/img/12-mot-toi-cung-nhau.jpg" width="1000" height="750" alt="Picnic buổi tối cùng bạn bè" loading="lazy"><p class="script">Một tối cùng nhau</p></figure>
+<figure class="pol vid" data-video="assets/video/ky-niem-lop-04-10-2024.mp4" data-cap="Kỷ niệm lớp · 04.10.2024"><img src="assets/video/ky-niem-lop-04-10-2024-poster.jpg" width="640" height="480" alt="Video kỷ niệm lớp" loading="lazy" decoding="async"><span class="play" aria-hidden="true">▶</span><p class="script">Kỷ niệm lớp · 04.10.2024</p></figure>
+<figure class="pol" data-cap="04.10.2024"><img src="assets/img/08-04-10-2024.jpg" width="750" height="1000" alt="Nháy mắt cùng bạn cùng lớp" loading="lazy" decoding="async"><p class="script">04.10.2024</p></figure>
+<figure class="pol" data-cap="Nay sinh nhật nhé!"><img src="assets/img/09-sinh-nhat-ban-be.jpg" width="748" height="752" alt="Sinh nhật cùng bạn bè" loading="lazy" decoding="async"><p class="script">Nay sinh nhật nhé!</p></figure>
+<figure class="pol" data-cap="Thổi nến"><img src="assets/img/10-thoi-nen.jpg" width="750" height="1000" alt="Thổi nến sinh nhật" loading="lazy" decoding="async"><p class="script">Thổi nến</p></figure>
+<figure class="pol" data-cap="Thăng Long 35 mùa hoa"><img src="assets/img/11-thang-long-35-mua-hoa.jpg" width="648" height="730" alt="Check-in Thăng Long 35 mùa hoa" loading="lazy" decoding="async"><p class="script">Thăng Long 35 mùa hoa</p></figure>
+<figure class="pol" data-cap="Một tối cùng nhau"><img src="assets/img/12-mot-toi-cung-nhau.jpg" width="1000" height="750" alt="Picnic buổi tối cùng bạn bè" loading="lazy" decoding="async"><p class="script">Một tối cùng nhau</p></figure>
   </div>
 </section>
 
@@ -255,7 +301,7 @@ var kj=$('#kanji');'卒業おめでとう'.split('').forEach(function(c,i){var s
 // marquee
 var t='卒業おめでとう ✿ Happy Graduation ✿ 桜 ✿ ご卒業おめでとうございます ✿ ';$('#mq').textContent=t.repeat(8);
 // gate
-$('#open').onclick=function(){if($('#gate').classList.contains('open'))return;$('#gate').classList.add('open');setTimeout(function(){$('#gate').classList.add('gone');document.body.classList.remove('lock');document.body.classList.add('go')},1500)};
+$('#open').onclick=function(){if($('#gate').classList.contains('open'))return;startFx();$('#gate').classList.add('open');setTimeout(function(){$('#gate').classList.add('gone');document.body.classList.remove('lock');document.body.classList.add('go')},1500)};
 // reveal
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.2});
 document.querySelectorAll('.rv,.pol').forEach(function(el){io.observe(el)});
@@ -275,15 +321,16 @@ $('#cal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text
 var V=[['卒業','そつぎょう · sotsugyō','Tốt nghiệp'],['桜','さくら · sakura','Hoa anh đào'],['友達','ともだち · tomodachi','Bạn bè'],['夢','ゆめ · yume','Ước mơ'],['感謝','かんしゃ · kansha','Biết ơn'],['未来','みらい · mirai','Tương lai']];
 V.forEach(function(v){var d=document.createElement('div');d.className='flip rv';d.innerHTML='<div><i class="f jp">'+v[0]+'</i><i class="b"><em class="jp">'+v[2]+'</em>'+v[1]+'</i></div>';d.onclick=function(){d.classList.toggle('on')};$('#vg').appendChild(d);io.observe(d)});
 // canvas
-var cv=$('#fx'),cx=cv.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,2);
-function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}size();addEventListener('resize',size);
+var cv=$('#fx'),cx=cv.getContext('2d'),W,H,dpr=Math.min(devicePixelRatio||1,innerWidth<700?1.5:2);
+function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}size();var lw=innerWidth;addEventListener('resize',function(){if(innerWidth!==lw||Math.abs(innerHeight-H)>160){lw=innerWidth;size()}});
 function petal(top){return{x:Math.random()*W,y:top?-20:Math.random()*H,r:5+Math.random()*7,vy:.5+Math.random(),sw:Math.random()*6.28,rot:Math.random()*6,vr:(Math.random()-.5)*.04,a:.45+Math.random()*.4}}
-var ps=[],cf=[],N=reduce?0:(W<600?22:42);for(var i=0;i<N;i++)ps.push(petal(false));
+var ps=[],cf=[],N=reduce?0:(W<600?16:42);for(var i=0;i<N;i++)ps.push(petal(false));
 var cols=['#ff9db5','#e8c26a','#a9b8ff','#ffffff','#e8708f'];
-(function f(){cx.clearRect(0,0,W,H);
+function f(){cx.clearRect(0,0,W,H);
 ps.forEach(function(p,i){p.sw+=.02;p.x+=Math.sin(p.sw)*.7+.25;p.y+=p.vy;p.rot+=p.vr;if(p.y>H+20||p.x>W+20)ps[i]=petal(true);cx.save();cx.translate(p.x,p.y);cx.rotate(p.rot);cx.globalAlpha=p.a;cx.fillStyle='#f7a8bd';cx.beginPath();cx.moveTo(0,-p.r);cx.quadraticCurveTo(p.r,-p.r*.3,0,p.r);cx.quadraticCurveTo(-p.r,-p.r*.3,0,-p.r);cx.fill();cx.restore()});
 cf=cf.filter(function(c){return c.y<H+20});cf.forEach(function(c){c.vy+=.12;c.x+=c.vx;c.y+=c.vy;c.rot+=c.vr;cx.save();cx.translate(c.x,c.y);cx.rotate(c.rot);cx.fillStyle=c.col;cx.fillRect(-c.s/2,-c.s/4,c.s,c.s/2);cx.restore()});
-requestAnimationFrame(f)})();
+requestAnimationFrame(f)}
+var fxOn=false;function startFx(){if(fxOn||reduce)return;fxOn=true;requestAnimationFrame(f)}
 function boom(y){if(reduce)return;for(var i=0;i<140;i++){var a=Math.random()*6.28,v=4+Math.random()*9;cf.push({x:W/2,y:y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-6,s:6+Math.random()*7,rot:0,vr:(Math.random()-.5)*.4,col:cols[i%5]})}}
 var toast=$('#toast');
 $('#cheer').onclick=function(){boom(H*.6);toast.classList.add('on');setTimeout(function(){toast.classList.remove('on')},2600)};
